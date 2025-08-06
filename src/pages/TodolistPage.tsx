@@ -81,7 +81,7 @@ function App() {
         </>
       </div>
       <Footer
-      year={2025}
+      year ="2025"
       fullName="สิรวิชญ์ อริยวัฒนาวงศ์"
       studentId="670610740"
     />
