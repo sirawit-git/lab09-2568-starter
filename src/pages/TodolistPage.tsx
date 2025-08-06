@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import TaskCard from "../components/TaskCard";
 import TodoModal from "../components/Modal";
 import { type TaskCardProps } from "../libs/Todolist";
@@ -45,12 +46,16 @@ function App() {
     setTasks(newTasks);
   };
 
+  const totalTasks = tasks.length;
+  const doneTasks = tasks.filter((task) => task.isDone).length;
+
   return (
     <div className="col-12 m-2 p-0">
       <div className="container text-center">
         <h2>Todo List</h2>
-        <span className="m-2">All : () Done : ()</span>
+         <span className="m-2">All : {totalTasks} Done : {doneTasks}</span>
         {/* Modal Component */}
+
         <button
           type="button"
           className="btn btn-primary my-3"
@@ -75,6 +80,11 @@ function App() {
           ))}
         </>
       </div>
+      <Footer
+      year={2025}
+      fullName="สิรวิชญ์ อริยวัฒนาวงศ์"
+      studentId="670610740"
+    />
     </div>
   );
 }
